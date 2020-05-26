@@ -32,7 +32,7 @@ $("#submitName").click(function(e) {
       window.location.href = "/";
     })
     .catch((err) => {
-      console.lg("ERR", err);
+      console.log("ERR", err);
     });
 
 })
