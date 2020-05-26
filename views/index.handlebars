@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <input type="text" id="userInput"/>
+            <br/>
+            <button id="submitName" class="btn btn-success d-inline-block">Submit Name</buttonid=class=>
+        </div>
+    </div>
+    <div class="row">
+
+
+        <div class="col-md-6">
+            <h3>Not Devoured</h3>
+            {{#each burgers}}
+            {{#unless this.devoured}}
+            <h4>{{this.burger_name}} <button id={{this.id}} class="btn btn-primary toDevour">Devour</button></h4>
+            {{/unless}}
+            {{/each}}
+
+        </div>
+
+        <div class="col-md-6">
+            <h3>Devoured</h3>
+            {{#each burgers}}
+            {{#if this.devoured}}
+            <h4>{{this.burger_name}}</h4>
+            {{/if}}
+            {{/each}}
+        </div>
+
+    </div>
+</div>
+
